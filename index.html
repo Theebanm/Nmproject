@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog</title>
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        nav {
+            background-color: #f1b6b6;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+             text-decoration: none;
+        }
+        nav h2{
+            text-decoration: none;
+            font-size: xx-large;
+            color: #0073e6;
+    
+
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+           
+        
+        }
+
+        header {
+            background-image: ("wallpaperflare.com_wallpaper (14).jpg");
+            background-size:auto;
+        
+            text-align: center;
+            color: #fff;
+            padding: 100px 0;
+        }
+
+        section {
+            padding: 20px;
+          
+        }
+
+        article {
+            margin-bottom: 30px;
+            color: #fff;
+            
+        }
+
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .photo-gallery img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+        }
+
+        .like-button {
+            background-color: #0073e6;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        /* JavaScript for Like Button Interaction */
+        .like-button:hover {
+            background-color: #0058a2;
+        }
+    </style>
+</head>
+<body background="famous-tower-bridge-evening-london-england.jpg">
+    <!-- Navigation Bar -->
+    <nav>
+        <div><h2>TRAVEL BLOG</h2></div>
+        
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#stories">Travel Stories</a></li>
+            <li><a href="#tips">Travel Tips</a></li>
+            <li><a href="#photos">Photos</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header (Homepage) -->
+    <header id="home">
+        <h1>Welcome to My Travel Blog</h1>
+        <p>Exploring the world, one adventure at a time.</p>
+    </header>
+
+    <!-- Travel Stories Section -->
+    <section id="stories">
+        <h2>Travel Stories</h2>
+        <article>
+            <h3>Adventure in Paris</h3>
+            <p>Once upon a time in the City of Light...</p>
+            <button class="like-button" onclick="incrementLikes(1)">Like</button>
+            <span id="likes-1">0 Likes</span>
+        </article>
+        <!-- More travel story articles go here -->
+    </section>
+
+    <!-- Travel Tips Section -->
+    <section id="tips">
+        <h2>Travel Tips</h2>
+        <article>
+            <h3>Packing Essentials</h3>
+            <ul>
+                <li>Use Public Transportation: London has an extensive and efficient public transportation system, including the Underground (Tube), buses, trams, and trains. Consider purchasing an Oyster card or a contactless payment card for discounted fares. Public transport is often the quickest way to get around the city and avoid traffic.
+                   <li> Explore Neighborhoods: London is a city of diverse neighborhoods, each with its own unique charm. Don't limit your exploration to just the touristy areas. Wander through neighborhoods like Shoreditch, Notting Hill, and Camden to discover local markets, street art, and a variety of cuisines</li>  </li><li> Check the Weather and Dress in Layers: London's weather can be quite unpredictable. It's a good idea to check the weather forecast before your trip and pack layers of clothing. Even in the summer, it's a good practice to carry an umbrella and a light jacket or sweater.
+                </li>
+                <!-- Add more tips here -->
+            </ul>
+        </article>
+        <!-- More travel tips articles go here -->
+    </section>
+
+    <!-- Photos Section -->
+    <section id="photos">
+        <h2>Photos</h2>
+        <div class="photo-gallery">
+            <img src="paris.jpg" alt="Paris">
+            <img src="beach.jpg" alt="Beach">
+            <img src="data:image/jpeg;base64,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" alt="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdH_Ud7Zt9unGRBKEro7ZET2XcLY7ozvhzDlTQ_NW79A&s" alt="london">
+            <!-- Add more photos here -->
+        </div>
+    </section>
+
+    <!-- JavaScript for Like Button Interaction -->
+    <script>
+        function incrementLikes(storyId) {
+            const likesElement = document.getElementById(`likes-${storyId}`);
+            const currentLikes = parseInt(likesElement.innerText.split(' ')[0]);
+            likesElement.innerText = `${currentLikes + 1} Likes`;
+        }
+    </script>
+</body>
+</html>
